@@ -1,2 +1,8 @@
-make install
-make test
+name: main workflow
+on: push
+jobs:
+  main_job:
+    runs-on: ubuntu-latest
+    steps:
+    - run: make install
+    - run:  make test
